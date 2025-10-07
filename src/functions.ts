@@ -7,7 +7,7 @@
  * greet("Hamza") logs "Hello Hamza"
  */
 function greet(name: string): void {
-  // Your code here
+  console.log(`Hello ${name}`);
 }
 
 /**
@@ -20,9 +20,14 @@ function greet(name: string): void {
  * isOdd(10) -> false
  */
 function isOdd(n: number): boolean {
-  // Your code here
+  let result: boolean;
+  if (n % 2 === 0) {
+    result = false;
+  } else {
+    result = true;
+  }
 
-  return false; // replace false with what you see is fit
+  return result; // replace false with what you see is fit
 }
 
 /**
@@ -35,9 +40,7 @@ function isOdd(n: number): boolean {
  * oddsSmallerThan(15) -> 7; // the odd numbers being 1, 3, 5, 7, 9, 11, 13
  */
 function oddsSmallerThan(n: number): number {
-  // Your code here
-
-  return -1; // replace -1 with what you see is fit
+  return Math.floor(n / 2); // replace -1 with what you see is fit
 }
 
 /**
@@ -51,9 +54,16 @@ function oddsSmallerThan(n: number): number {
  * squareOrDouble(9) -> 81; // (9 ^ 2)
  */
 function squareOrDouble(n: number): number {
-  // Your code here
+  let result: number;
+  if (n % 2 === 0) {
+    result = n * 2;
+  } else if (n === 0) {
+    result = 0;
+  } else {
+    result = n ** 2;
+  }
 
-  return -1; // replace -1 with what you see is fit
+  return result; // replace -1 with what you see is fit
 }
 
 export { greet, isOdd, oddsSmallerThan, squareOrDouble };
